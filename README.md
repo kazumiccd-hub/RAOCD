@@ -22,6 +22,12 @@ Python 3を用意し、依存パッケージをインストールします。
 pip install -r requirements.txt
 ```
 
+Linux環境でTkinterが入っていない場合は、OSのパッケージマネージャでTkinterもインストールしてください。
+
+```bash
+sudo apt install python3-tk
+```
+
 OpenOCDは別途インストールし、CMSIS-DAPデバッガを接続してください。
 
 ## 実行方法
@@ -34,3 +40,9 @@ python raocd_gui.py
 2. `Binary File`で書き込み対象ファイルを選択します。
 3. `Write`ボタンを押すと、`interface/cmsis-dap.cfg`と`target/renesas_ra.cfg`を使ってOpenOCDが起動し、`program <選択ファイル> verify reset exit`を実行します。
 4. OpenOCDの標準出力と標準エラー出力は画面下部の`Execution Log`に表示されます。
+
+## テスト
+
+```bash
+python -m unittest
+```
