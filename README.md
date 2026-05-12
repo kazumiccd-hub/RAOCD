@@ -19,7 +19,7 @@ openocd -f interface/cmsis-dap.cfg -f target/renesas_ra.cfg -c "program filename
 Python 3を用意し、依存パッケージをインストールします。
 
 ```bash
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 Linux環境でTkinterが入っていない場合は、OSのパッケージマネージャでTkinterもインストールしてください。
@@ -33,7 +33,7 @@ OpenOCDは別途インストールし、CMSIS-DAPデバッガを接続してく�
 ## 実行方法
 
 ```bash
-python raocd_gui.py
+python3 raocd_gui.py
 ```
 
 1. `OpenOCD Path`でOpenOCD実行ファイルを選択します。PATHが通っている場合は初期値の`openocd`のまま使用できます。
@@ -44,5 +44,5 @@ python raocd_gui.py
 ## テスト
 
 ```bash
-python -m unittest
+python3 -m unittest
 ```
